@@ -2,22 +2,22 @@
 importScripts("js/sw-utils.js");
 
 // Constantes de nombres y versionamiento de caches
-const STATIC_CACHE = "static-v3";
+const STATIC_CACHE = "static-v4";
 const INMUTABLE_CACHE = "inmutable-v1";
-const DYNAMIC_CACHE = "dynamic-v2";
+const DYNAMIC_CACHE = "dynamic-v3";
 
 // Constantes para app_shell statico e inmutable
 const APP_SHELL = [
   // "/",
-  "/index.html",
-  "/css/style.css",
-  "/img/favicon.ico",
-  "/img/avatars/spiderman.jpg",
-  "/img/avatars/hulk.jpg",
-  "/img/avatars/ironman.jpg",
-  "/img/avatars/thor.jpg",
-  "/img/avatars/wolverine.jpg",
-  "/js/app.js",
+  "index.html",
+  "css/style.css",
+  "img/favicon.ico",
+  "img/avatars/spiderman.jpg",
+  "img/avatars/hulk.jpg",
+  "img/avatars/ironman.jpg",
+  "img/avatars/thor.jpg",
+  "img/avatars/wolverine.jpg",
+  "js/app.js",
 ];
 
 const APP_SHELL_INMUTABLE = [
