@@ -49,11 +49,11 @@ self.addEventListener("activate", (e) => {
   const respuesta = caches.keys().then((keys) => {
     keys.forEach((key) => {
       // Barriendo keys
-      if (
-        key !== STATIC_CACHE &&
-        key !== INMUTABLE_CACHE &&
-        key !== DYNAMIC_CACHE
-      ) {
+      if (key !== STATIC_CACHE && key.includes("static")) {
+        return caches.delete(key);
+      }
+
+      if (key !== DYNAMIC_CACHE && key.includes("dynamic")) {
         return caches.delete(key);
       }
     });
