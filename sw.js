@@ -1,5 +1,8 @@
 // Importando modulos
-importScripts("js/sw-utils.js");
+const url = window.location.href;
+let scriptLocation = "/twittor/js/sw-utils.js";
+if (url.includes("localhost")) scriptLocation = "js/sw-utils.js";
+importScripts(scriptLocation);
 
 // Constantes de nombres y versionamiento de caches
 const STATIC_CACHE = "static-v1";
